@@ -9,7 +9,7 @@ head(heartfailure, 10)
 
 #Time for some data preparation
 #Updating the column names of the names of some variables to more readable names
-colnames(heartfailure)[1] <- "patient's age"
+colnames(heartfailure)[1] <- "patients age"
 colnames(heartfailure)[7] <- "platelets"
 colnames(heartfailure)[10] <- "gender"
 colnames(heartfailure)[12] <- "follow up days"
@@ -50,10 +50,13 @@ pairs.panels(heartfailure,
              cor = TRUE)
 
 
+# Research question 1
+# Checking the histogram for age and ejection fraction to determine if they are normally distriuted
+hist(heartfailure$`patients age`, xlab = "Age (in years)", 
+     main = "Frequency chart for age of heart failure patients",
+     col = "steelblue")
 
-
-
-
-
-
-
+hist(heartfailure$ejection_fraction, xlab = "Ejection Fraction", 
+     main = "Frequency chart for ejection fraction of heart failure patients",
+     col = "steelblue")
+ 
